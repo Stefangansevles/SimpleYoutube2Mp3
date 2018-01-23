@@ -51,6 +51,13 @@ You can change the path where SimpleYoutube2Mp3 should download the .mp3 (or .mp
 
 Deleted / Lost a .mp3 from your computer? Simply go to history and look for the one you want, and you will be able to re-download the mp3
 
+
+# Disclaimer
+
+This program should only be used on non-copyrighted material.
+
+Use at your own risk.
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Written in: C# - Windows Forms
