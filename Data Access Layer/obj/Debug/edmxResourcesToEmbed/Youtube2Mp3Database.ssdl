@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Youtube2Mp3DatabaseModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Users\schultenbrau\AppData\Local\Simple Youtube2Mp3\Simple Youtube2Mp3.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DownloadHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="integer" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="ChannelTitle" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="ThumbnailLink" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="DownloadDate" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="VideoId" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="integer" Nullable="false" />
+    <Property Name="MP3Path" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="VideoPath" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="AutomaticDownload" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="PlaySound" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="SoundFile" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="CopyFromClipboard" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="ShowNotification" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="KeepMp4" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityContainer Name="Youtube2Mp3DatabaseModelStoreContainer">
+    <EntitySet Name="DownloadHistory" EntityType="Self.DownloadHistory" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="Self.Settings" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

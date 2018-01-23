@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Youtube2Mp3DatabaseModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Users\schultenbrau\AppData\Local\Simple Youtube2Mp3\Simple Youtube2Mp3.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DownloadHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="ChannelTitle" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="ThumbnailLink" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="DownloadDate" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="VideoId" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" Nullable="false" />
+          <Property Name="MP3Path" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="VideoPath" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="AutomaticDownload" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="PlaySound" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="SoundFile" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="CopyFromClipboard" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="ShowNotification" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="KeepMp4" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityContainer Name="Youtube2Mp3DatabaseModelStoreContainer">
+          <EntitySet Name="DownloadHistory" EntityType="Self.DownloadHistory" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Youtube2Mp3DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Youtube2Mp3DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DownloadHistory" EntityType="Youtube2Mp3DatabaseModel.DownloadHistory" />
+          <EntitySet Name="Settings" EntityType="Youtube2Mp3DatabaseModel.Settings" />
+        </EntityContainer>
+        <EntityType Name="DownloadHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ChannelTitle" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="String" Nullable="false" />
+          <Property Name="ThumbnailLink" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DownloadDate" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="VideoId" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="MP3Path" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="VideoPath" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="AutomaticDownload" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="PlaySound" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="SoundFile" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="CopyFromClipboard" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ShowNotification" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="KeepMp4" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Youtube2Mp3DatabaseModelStoreContainer" CdmEntityContainer="Youtube2Mp3DatabaseEntities">
+          <EntitySetMapping Name="DownloadHistory">
+            <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.DownloadHistory">
+              <MappingFragment StoreEntitySet="DownloadHistory">
+                <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+                <ScalarProperty Name="DownloadDate" ColumnName="DownloadDate" />
+                <ScalarProperty Name="ThumbnailLink" ColumnName="ThumbnailLink" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="ChannelTitle" ColumnName="ChannelTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.Settings">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="KeepMp4" ColumnName="KeepMp4" />
+                <ScalarProperty Name="ShowNotification" ColumnName="ShowNotification" />
+                <ScalarProperty Name="CopyFromClipboard" ColumnName="CopyFromClipboard" />
+                <ScalarProperty Name="SoundFile" ColumnName="SoundFile" />
+                <ScalarProperty Name="PlaySound" ColumnName="PlaySound" />
+                <ScalarProperty Name="AutomaticDownload" ColumnName="AutomaticDownload" />
+                <ScalarProperty Name="VideoPath" ColumnName="VideoPath" />
+                <ScalarProperty Name="MP3Path" ColumnName="MP3Path" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Youtube2Mp3", "Youtube2Mp3Converter\Simple Youtube2Mp3.csproj", "{852514C8-ED6E-458E-A4BE-DF4D3EED7642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic Layer", "Business Logic Layer\Business Logic Layer.csproj", "{D73730EB-E719-454B-87EF-FD0BF2EB6816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{55EFD407-7A6B-4F80-A0FC-EDF33606C16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database.Entity", "Database.Entity\Database.Entity.csproj", "{D2B742FA-6BF0-472C-84B9-CC3F17EEB60C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSimpleYoutube2Mp3", "SetupSimpleYoutube2Mp3\SetupSimpleYoutube2Mp3.vdproj", "{37F2C227-9697-4131-A98F-13885B8D4B70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = Simply converts a youtube video to a .mp3 music file!
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{852514C8-ED6E-458E-A4BE-DF4D3EED7642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852514C8-ED6E-458E-A4BE-DF4D3EED7642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852514C8-ED6E-458E-A4BE-DF4D3EED7642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852514C8-ED6E-458E-A4BE-DF4D3EED7642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73730EB-E719-454B-87EF-FD0BF2EB6816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73730EB-E719-454B-87EF-FD0BF2EB6816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73730EB-E719-454B-87EF-FD0BF2EB6816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73730EB-E719-454B-87EF-FD0BF2EB6816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55EFD407-7A6B-4F80-A0FC-EDF33606C16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EFD407-7A6B-4F80-A0FC-EDF33606C16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EFD407-7A6B-4F80-A0FC-EDF33606C16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EFD407-7A6B-4F80-A0FC-EDF33606C16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B742FA-6BF0-472C-84B9-CC3F17EEB60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B742FA-6BF0-472C-84B9-CC3F17EEB60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B742FA-6BF0-472C-84B9-CC3F17EEB60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B742FA-6BF0-472C-84B9-CC3F17EEB60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F2C227-9697-4131-A98F-13885B8D4B70}.Debug|Any CPU.ActiveCfg = Debug
+		{37F2C227-9697-4131-A98F-13885B8D4B70}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

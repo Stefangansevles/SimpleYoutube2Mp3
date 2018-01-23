@@ -1,0 +1,16 @@
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\Data Access Layer.dll.config
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\Data Access Layer.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\Data Access Layer.pdb
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\Database.Entity.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\EntityFramework.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\System.Data.SQLite.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\Database.Entity.pdb
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\EntityFramework.xml
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\bin\Debug\System.Data.SQLite.xml
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\obj\Debug\Data Access Layer.csprojResolveAssemblyReference.cache
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\obj\Debug\Data Access Layer.dll
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Data Access Layer\obj\Debug\Data Access Layer.pdb

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Youtube2Mp3DatabaseModelStoreContainer" CdmEntityContainer="Youtube2Mp3DatabaseEntities">
+    <EntitySetMapping Name="DownloadHistory">
+      <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.DownloadHistory">
+        <MappingFragment StoreEntitySet="DownloadHistory">
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="DownloadDate" ColumnName="DownloadDate" />
+          <ScalarProperty Name="ThumbnailLink" ColumnName="ThumbnailLink" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ChannelTitle" ColumnName="ChannelTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.Settings">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="KeepMp4" ColumnName="KeepMp4" />
+          <ScalarProperty Name="ShowNotification" ColumnName="ShowNotification" />
+          <ScalarProperty Name="CopyFromClipboard" ColumnName="CopyFromClipboard" />
+          <ScalarProperty Name="SoundFile" ColumnName="SoundFile" />
+          <ScalarProperty Name="PlaySound" ColumnName="PlaySound" />
+          <ScalarProperty Name="AutomaticDownload" ColumnName="AutomaticDownload" />
+          <ScalarProperty Name="VideoPath" ColumnName="VideoPath" />
+          <ScalarProperty Name="MP3Path" ColumnName="MP3Path" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
