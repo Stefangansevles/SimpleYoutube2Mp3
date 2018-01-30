@@ -185,6 +185,45 @@ namespace Data_Access_Layer
             }
             return path;
         }
+
+        public static string GetAudioType()
+        {
+            string type = "";
+            using (Youtube2Mp3DatabaseEntities db = new Youtube2Mp3DatabaseEntities())
+            {
+                var count = db.Settings.Where(o => o.Id >= 0).Count();
+                if (count > 0)
+                {
+
+                    type = (from g in db.Settings select g.AudioFormat).SingleOrDefault();
+                    db.Dispose();
+                }
+                else
+                {
+                    RefreshSettings();
+                }
+            }
+            return type;
+        }
+        public static string GetVideoType()
+        {
+            string type = "";
+            using (Youtube2Mp3DatabaseEntities db = new Youtube2Mp3DatabaseEntities())
+            {
+                var count = db.Settings.Where(o => o.Id >= 0).Count();
+                if (count > 0)
+                {
+
+                    type = (from g in db.Settings select g.VideoFormat).SingleOrDefault();
+                    db.Dispose();
+                }
+                else
+                {
+                    RefreshSettings();
+                }
+            }
+            return type;
+        }
         public static string GetMP3Path()
         {
             string path = "";

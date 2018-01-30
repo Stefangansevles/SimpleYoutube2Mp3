@@ -14,7 +14,7 @@ namespace Data_Access_Layer
 
         private static readonly string DB_FILE = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Simple Youtube2Mp3\\Simple Youtube2Mp3.db";
         private const string TABLE_DOWNLOAD_HISTORY = "CREATE TABLE [DownloadHistory] ([Id] INTEGER NOT NULL, [Title]text NOT NULL, [ChannelTitle]text NOT NULL, [Duration]text NOT NULL, [ThumbnailLink]text NOT NULL, [DownloadDate]text NOT NULL, [VideoId]text NULL, CONSTRAINT[sqlite_master_PK_DownloadHistory] PRIMARY KEY([Id]));";
-        private const string TABLE_SETTINGS = "CREATE TABLE [Settings] ([Id] INTEGER NOT NULL, [MP3Path]text NOT NULL, [VideoPath]text NOT NULL, [AutomaticDownload]text NOT NULL, [PlaySound]text NOT NULL, [SoundFile]text NULL, [CopyFromClipboard] text NOT NULL, [ShowNotification]text DEFAULT true NOT NULL, [KeepMp4] text NULL, CONSTRAINT[sqlite_master_PK_Settings] PRIMARY KEY([Id]));";
+        private const string TABLE_SETTINGS = "CREATE TABLE [Settings] ([Id] INTEGER NOT NULL, [MP3Path]text NOT NULL, [VideoPath]text NOT NULL, [AutomaticDownload]text NOT NULL, [PlaySound]text NOT NULL, [SoundFile]text NULL, [CopyFromClipboard] text NOT NULL, [ShowNotification]text DEFAULT true NOT NULL, [KeepMp4] text NULL, [VideoFormat] text DEFAULT mp4 NOT NULL, [AudioFormat]text DEFAULT mp3 NOT NULL, CONSTRAINT[sqlite_master_PK_Settings] PRIMARY KEY([Id]));";
 
         /// <summary>
         /// Creates the database with associated tables
@@ -204,7 +204,7 @@ namespace Data_Access_Layer
             //Yes, this is not really the "correct" way of dealing with a problem, but after a lot of searching it's quite a struggle
             //to get the data types of the sqlite columns, especially when they're nullable.
             switch (columnName)
-            {
+            {                
                 case "MP3Path": return "text NOT NULL";
                 case "VideoPath": return "text NOT NULL";
                 case "AutomaticDownload": return "text NOT NULL";
@@ -213,6 +213,8 @@ namespace Data_Access_Layer
                 case "CopyFromClipboard": return "text NOT NULL";
                 case "ShowNotification": return "text DEFAULT true NOT NULL";
                 case "KeepMp4": return "text NULL";
+                case "VideoFormat": return "text DEFAULT mp4 NOT NULL";
+                case "AudioFormat": return "text DEFAULT mp3 NOT NULL";
                 default: return "text NULL";
             }
         }

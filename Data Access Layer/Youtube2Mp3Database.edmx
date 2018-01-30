@@ -30,6 +30,8 @@
           <Property Name="CopyFromClipboard" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="ShowNotification" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="KeepMp4" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="VideoFormat" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="AudioFormat" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
         </EntityType>
         <EntityContainer Name="Youtube2Mp3DatabaseModelStoreContainer">
           <EntitySet Name="DownloadHistory" EntityType="Self.DownloadHistory" store:Type="Tables" />
@@ -68,6 +70,8 @@
           <Property Name="CopyFromClipboard" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="ShowNotification" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="KeepMp4" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="VideoFormat" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="AudioFormat" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -91,6 +95,8 @@
           <EntitySetMapping Name="Settings">
             <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.Settings">
               <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="AudioFormat" ColumnName="AudioFormat" />
+                <ScalarProperty Name="VideoFormat" ColumnName="VideoFormat" />
                 <ScalarProperty Name="KeepMp4" ColumnName="KeepMp4" />
                 <ScalarProperty Name="ShowNotification" ColumnName="ShowNotification" />
                 <ScalarProperty Name="CopyFromClipboard" ColumnName="CopyFromClipboard" />

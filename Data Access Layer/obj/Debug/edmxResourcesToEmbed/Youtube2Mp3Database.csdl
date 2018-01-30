@@ -29,5 +29,7 @@
     <Property Name="CopyFromClipboard" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="ShowNotification" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="KeepMp4" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="VideoFormat" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="AudioFormat" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -17,6 +17,8 @@
     <EntitySetMapping Name="Settings">
       <EntityTypeMapping TypeName="Youtube2Mp3DatabaseModel.Settings">
         <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="AudioFormat" ColumnName="AudioFormat" />
+          <ScalarProperty Name="VideoFormat" ColumnName="VideoFormat" />
           <ScalarProperty Name="KeepMp4" ColumnName="KeepMp4" />
           <ScalarProperty Name="ShowNotification" ColumnName="ShowNotification" />
           <ScalarProperty Name="CopyFromClipboard" ColumnName="CopyFromClipboard" />

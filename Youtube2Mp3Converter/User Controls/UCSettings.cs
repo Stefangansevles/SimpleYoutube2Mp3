@@ -47,6 +47,7 @@ namespace Simple_Youtube2Mp3
 
         private void UCSettings_Load(object sender, EventArgs e)
         {
+            
             new Thread(() =>
             {
                 if (!string.IsNullOrEmpty(BLSettings.MP3Path))
@@ -64,6 +65,9 @@ namespace Simple_Youtube2Mp3
                 else
                     setTextboxText(tbSoundFile, "default");
 
+                SetComboboxValue(cbAudioFileTypes,BLSettings.AudioType);
+                SetComboboxValue(cbVideoFileTypes, BLSettings.VideoType);
+
                 setCheckboxValue(cbAutomaticDownload, BLSettings.IsAutomaticDownload);
                 setCheckboxValue(cbAutomaticPaste, BLSettings.IsCopyFromClipboard);
                 setCheckboxValue(cbPlaySound, BLSettings.PlaySound);
@@ -79,6 +83,15 @@ namespace Simple_Youtube2Mp3
                 tb.Text = txt;
             }));
         }
+
+        private void SetComboboxValue(ComboBox cb, string txt)
+        {
+            cb.Invoke((MethodInvoker)(() =>
+            {                
+                cb.Text = txt;
+            }));
+        }
+
         private void setCheckboxValue(Bunifu.Framework.UI.BunifuCheckbox cb, bool value)
         {
             cb.Invoke((MethodInvoker)(() =>
@@ -167,6 +180,16 @@ namespace Simple_Youtube2Mp3
                 setTextboxText(tbSoundFile, BLSettings.SoundFile);
             else
                 setTextboxText(tbSoundFile, "default");
+        }
+
+        private void cbAudioFileTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BLSettings.AudioType = cbAudioFileTypes.SelectedItem.ToString();
+        }
+
+        private void cbVideoFileTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BLSettings.VideoType = cbVideoFileTypes.SelectedItem.ToString();
         }
     }
 }

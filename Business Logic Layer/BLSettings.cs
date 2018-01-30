@@ -84,6 +84,28 @@ namespace Business_Logic_Layer
                 UpdateSettings(set);
             }
         }
+
+        public static string AudioType
+        {
+            get { return DLSettings.GetAudioType(); }
+            set
+            {
+                Settings set = GetSettings();
+                set.AudioFormat = value.ToString().ToLower();
+                UpdateSettings(set);
+            }
+        }
+
+        public static string VideoType
+        {
+            get { return DLSettings.GetVideoType(); }
+            set
+            {
+                Settings set = GetSettings();
+                set.VideoFormat = value.ToString().ToLower();
+                UpdateSettings(set);
+            }
+        }
         public static string MP3Path
         {
             get { return DLSettings.GetMP3Path(); }

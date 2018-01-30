@@ -45,6 +45,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSettings = new System.Windows.Forms.Panel();
+            this.cbVideoFileTypes = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbAudioFileTypes = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pbSoundFile = new System.Windows.Forms.PictureBox();
             this.pbVideoPath = new System.Windows.Forms.PictureBox();
             this.pbMP3Path = new System.Windows.Forms.PictureBox();
@@ -145,7 +150,7 @@
             // 
             // cbAutomaticDownload
             // 
-            this.cbAutomaticDownload.BackColor = System.Drawing.Color.IndianRed;
+            this.cbAutomaticDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbAutomaticDownload.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbAutomaticDownload.Checked = false;
             this.cbAutomaticDownload.CheckedOnColor = System.Drawing.Color.IndianRed;
@@ -180,7 +185,7 @@
             // 
             // cbAutomaticPaste
             // 
-            this.cbAutomaticPaste.BackColor = System.Drawing.Color.IndianRed;
+            this.cbAutomaticPaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbAutomaticPaste.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbAutomaticPaste.Checked = false;
             this.cbAutomaticPaste.CheckedOnColor = System.Drawing.Color.IndianRed;
@@ -262,6 +267,11 @@
             // pnlSettings
             // 
             this.pnlSettings.AutoScroll = true;
+            this.pnlSettings.Controls.Add(this.cbVideoFileTypes);
+            this.pnlSettings.Controls.Add(this.label10);
+            this.pnlSettings.Controls.Add(this.cbAudioFileTypes);
+            this.pnlSettings.Controls.Add(this.label9);
+            this.pnlSettings.Controls.Add(this.label8);
             this.pnlSettings.Controls.Add(this.label7);
             this.pnlSettings.Controls.Add(this.cbAutomaticDownload);
             this.pnlSettings.Controls.Add(this.label6);
@@ -276,6 +286,67 @@
             this.pnlSettings.Name = "pnlSettings";
             this.pnlSettings.Size = new System.Drawing.Size(672, 298);
             this.pnlSettings.TabIndex = 23;
+            // 
+            // cbVideoFileTypes
+            // 
+            this.cbVideoFileTypes.Font = new System.Drawing.Font("Century", 10F);
+            this.cbVideoFileTypes.FormattingEnabled = true;
+            this.cbVideoFileTypes.Items.AddRange(new object[] {
+            "mp4",
+            "mkv",
+            "avi",
+            "wmv",
+            "amv"});
+            this.cbVideoFileTypes.Location = new System.Drawing.Point(67, 229);
+            this.cbVideoFileTypes.Name = "cbVideoFileTypes";
+            this.cbVideoFileTypes.Size = new System.Drawing.Size(59, 24);
+            this.cbVideoFileTypes.TabIndex = 28;
+            this.cbVideoFileTypes.SelectedIndexChanged += new System.EventHandler(this.cbVideoFileTypes_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century", 10F);
+            this.label10.Location = new System.Drawing.Point(11, 231);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 17);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Video:";
+            // 
+            // cbAudioFileTypes
+            // 
+            this.cbAudioFileTypes.Font = new System.Drawing.Font("Century", 10F);
+            this.cbAudioFileTypes.FormattingEnabled = true;
+            this.cbAudioFileTypes.Items.AddRange(new object[] {
+            "mp3",
+            "wav",
+            "au",
+            "flac"});
+            this.cbAudioFileTypes.Location = new System.Drawing.Point(67, 202);
+            this.cbAudioFileTypes.Name = "cbAudioFileTypes";
+            this.cbAudioFileTypes.Size = new System.Drawing.Size(59, 24);
+            this.cbAudioFileTypes.TabIndex = 26;
+            this.cbAudioFileTypes.SelectedIndexChanged += new System.EventHandler(this.cbAudioFileTypes_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century", 10F);
+            this.label9.Location = new System.Drawing.Point(11, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 17);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Audio:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "File types";
             // 
             // pbSoundFile
             // 
@@ -378,5 +449,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlSettings;
         private System.Windows.Forms.PictureBox pbResetSound;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbVideoFileTypes;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbAudioFileTypes;
     }
 }

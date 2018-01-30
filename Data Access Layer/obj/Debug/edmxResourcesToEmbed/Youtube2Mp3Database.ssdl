@@ -25,6 +25,8 @@
     <Property Name="CopyFromClipboard" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="ShowNotification" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="KeepMp4" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="VideoFormat" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="AudioFormat" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
   </EntityType>
   <EntityContainer Name="Youtube2Mp3DatabaseModelStoreContainer">
     <EntitySet Name="DownloadHistory" EntityType="Self.DownloadHistory" store:Type="Tables" />

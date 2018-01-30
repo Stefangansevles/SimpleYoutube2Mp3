@@ -212,11 +212,11 @@ namespace Simple_Youtube2Mp3
                 };
 
 
-                pathToSong = GetValidFilePath(BLSettings.MP3Path,theVideo.Title,".mp3");                
+                pathToSong = GetValidFilePath(BLSettings.MP3Path,theVideo.Title, "." + BLSettings.AudioType);                
 
                 try
                 {
-                    await Task.Run(() => FFMpegConverter.ConvertMedia(filePath, pathToSong, "mp3"));
+                    await Task.Run(() => FFMpegConverter.ConvertMedia(filePath, pathToSong,BLSettings.AudioType));
                     if(File.Exists(pathToSong))
                     {
                         DownloadHistory historyRecord = new DownloadHistory();
@@ -237,9 +237,9 @@ namespace Simple_Youtube2Mp3
 
                    
                         if (BLSettings.KeepMp4)
-                            File.Move(BLIO.rootFolder + "\\Video\\" + RemoveIllegalCharacters(Path.GetFileNameWithoutExtension(filePath)) + ".mp4", BLSettings.VideoPath + "\\" + RemoveIllegalCharacters(Path.GetFileNameWithoutExtension(filePath)) + ".mp4");
+                            File.Move(BLIO.rootFolder + "\\Video\\" + RemoveIllegalCharacters(Path.GetFileNameWithoutExtension(filePath)) + "." + BLSettings.VideoType, BLSettings.VideoPath + "\\" + RemoveIllegalCharacters(Path.GetFileNameWithoutExtension(filePath)) + "." + BLSettings.VideoType);
                         else
-                            File.Delete(BLIO.rootFolder + "\\Video\\" + RemoveIllegalCharacters(filePath) + ".mp4");                                           
+                            File.Delete(BLIO.rootFolder + "\\Video\\" + RemoveIllegalCharacters(filePath) + "." + BLSettings.VideoType);                                           
                     }
                 }
                 catch (NullReferenceException) { } //Nullreference exception occurs when aborting the convert task
@@ -306,7 +306,7 @@ namespace Simple_Youtube2Mp3
                     lblStatus.Text = "Downloading...";
 
 
-                    pathToVideo = GetValidFilePath(BLIO.rootFolder + "\\Video\\", theVideo.Title, ".mp4");
+                    pathToVideo = GetValidFilePath(BLIO.rootFolder + "\\Video\\", theVideo.Title, "." + BLSettings.VideoType);
 
                     downloadTask = Task.Run(async () =>
                     {
@@ -398,12 +398,12 @@ namespace Simple_Youtube2Mp3
                 lblStatus.Text = "Downloading...";
 
                 
-                pathToVideo = GetValidFilePath(BLIO.rootFolder + "\\Video\\",video.Title, ".mp4");
+                pathToVideo = GetValidFilePath(BLIO.rootFolder + "\\Video\\",video.Title, "." + BLSettings.VideoType);
 
                 Task task = Task.Run(async () =>
                 {
                     ctsDownload.Token.ThrowIfCancellationRequested();
-                    await client.DownloadMediaStreamAsync(streamInfo, pathToVideo + RemoveIllegalCharacters(video.Title) + ".mp4", new Progress<double>(d => setProgressbarValue(pbDownload,(int)Math.Round(Convert.ToDouble(d.ToString()) * 100))),ctsDownload.Token);
+                    await client.DownloadMediaStreamAsync(streamInfo, pathToVideo + RemoveIllegalCharacters(video.Title) + "." + BLSettings.VideoType, new Progress<double>(d => setProgressbarValue(pbDownload,(int)Math.Round(Convert.ToDouble(d.ToString()) * 100))),ctsDownload.Token);
                 }, ctsDownload.Token);
                 await task;                
 
@@ -655,7 +655,7 @@ namespace Simple_Youtube2Mp3
                     }
 
                     if(!IsActive(Application.OpenForms["Form1"].Handle) && BLSettings.ShowNotification) //Form currently not on the foreground? show message form!
-                        MessageFormManager.MakeMessagePopup("Download Complete",theVideo.Title + ".mp3 Complete!", 2);
+                        MessageFormManager.MakeMessagePopup("Download Complete",theVideo.Title + "." + BLSettings.AudioType + " Complete!", 2);
                 }
                 else
                 {

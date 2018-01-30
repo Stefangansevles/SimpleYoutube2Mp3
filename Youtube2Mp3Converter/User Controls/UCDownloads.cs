@@ -26,7 +26,7 @@ namespace Simple_Youtube2Mp3
 
         public UCDownloads()
         {
-            InitializeComponent();
+            InitializeComponent();                     
             label2.Location = new Point(swConvert.Location.X - label2.Width - 5, label2.Location.Y);
             swConvert.Value = BLSettings.KeepMp4;
             _clipboardViewerNext = SetClipboardViewer(this.Handle);
@@ -64,7 +64,7 @@ namespace Simple_Youtube2Mp3
         }
 
         private void btnPaste_Click(object sender, EventArgs e)
-        {                                    
+        {           
             DownloadItem item = DownloadItemManager.AddDownloadItem(Clipboard.GetText(), pnlVideos);
             if(item != null)
                 toAutoDownloadVideos.Add(item);

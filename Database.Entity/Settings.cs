@@ -23,5 +23,7 @@ namespace Database.Entity
         public string CopyFromClipboard { get; set; }
         public string ShowNotification { get; set; }
         public string KeepMp4 { get; set; }
+        public string VideoFormat { get; set; }
+        public string AudioFormat { get; set; }
     }
 }
