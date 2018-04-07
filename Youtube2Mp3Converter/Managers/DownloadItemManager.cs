@@ -143,6 +143,19 @@ namespace Simple_Youtube2Mp3
                 MessageFormManager.MakeMessagePopup("Something went wrong!", "Could not find a video with that youtube url!\r\nPlease try again.", 5);
             }
         }
+
+        /// <summary>
+        /// Not yet tested, but if it works it's a very hacky way
+        /// </summary>
+        public static void Initialize(Panel pnl)
+        {
+            try
+            {                
+                DownloadItem toAddItem = new DownloadItem("https://www.youtube.com/watch?v=kXYiU_JCYtU");                                
+                pnl.Controls.Add(toAddItem);                
+            }
+            catch (Exception){}            
+        }
         /// <summary>
         /// Adds a downloadItem to the panel
         /// </summary>
@@ -216,7 +229,7 @@ namespace Simple_Youtube2Mp3
                 downloadItems.Add(toAddItem);
                 return toAddItem;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageFormManager.MakeMessagePopup("Something went wrong!", "Could not find a video with that youtube url!\r\nPlease try again.", 5);
             }

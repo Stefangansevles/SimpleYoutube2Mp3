@@ -11,6 +11,7 @@ using System.IO;
 using YoutubeExplode;
 using System.Runtime.InteropServices;
 using Business_Logic_Layer;
+using System.Threading;
 
 namespace Simple_Youtube2Mp3
 {
@@ -26,11 +27,13 @@ namespace Simple_Youtube2Mp3
 
         public UCDownloads()
         {
-            InitializeComponent();                     
+            InitializeComponent();
             label2.Location = new Point(swConvert.Location.X - label2.Width - 5, label2.Location.Y);
             swConvert.Value = BLSettings.KeepMp4;
-            _clipboardViewerNext = SetClipboardViewer(this.Handle);
+            _clipboardViewerNext = SetClipboardViewer(this.Handle);            
         }
+
+
         //prevent flickering / improve performance by setting every control to double buffered
         protected override CreateParams CreateParams
         {
@@ -66,14 +69,18 @@ namespace Simple_Youtube2Mp3
         private void btnPaste_Click(object sender, EventArgs e)
         {           
             DownloadItem item = DownloadItemManager.AddDownloadItem(Clipboard.GetText(), pnlVideos);
-            if(item != null)
-                toAutoDownloadVideos.Add(item);
+           
 
             pnlLoading.Visible = false;
             lblLoading.Visible = false;
 
             if (BLSettings.IsAutomaticDownload)
+            {
+                if (item != null)
+                    toAutoDownloadVideos.Add(item);
+
                 tmrDownload.Start();
+            }
         }
 
         private string GetSelectedPathWithFileName()

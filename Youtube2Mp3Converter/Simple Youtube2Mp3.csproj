@@ -262,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reseticon.png" />
+    <None Include="Resources\error.png" />
     <Content Include="youtube2mp3Ico.ico" />
     <Content Include="youtube2mp3Logo.ico" />
     <None Include="Resources\if_sound_115787.png" />

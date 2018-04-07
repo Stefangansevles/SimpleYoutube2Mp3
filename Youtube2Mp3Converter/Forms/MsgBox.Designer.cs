@@ -40,6 +40,7 @@
             this.btnYes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnOk = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMainGradient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.pnlFooterButtons.SuspendLayout();
@@ -239,6 +240,11 @@
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // MsgBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,5 +277,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnYes;
         private Bunifu.Framework.UI.BunifuFlatButton btnNo;
         private Bunifu.Framework.UI.BunifuFlatButton btnOk;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

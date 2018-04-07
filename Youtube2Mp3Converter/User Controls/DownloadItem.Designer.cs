@@ -30,33 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pbYoutubeThumbnail = new System.Windows.Forms.PictureBox();
             this.lblExit = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.pbDownload = new System.Windows.Forms.ProgressBar();
+            this.tmrCheckProgress = new System.Windows.Forms.Timer(this.components);
             this.pbLoad = new System.Windows.Forms.PictureBox();
             this.btnDownload = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tmrCheckProgress = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pbYoutubeThumbnail)).BeginInit();
+            this.pbYoutubeThumbnail = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDownload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbYoutubeThumbnail)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.pbYoutubeThumbnail;
-            // 
-            // pbYoutubeThumbnail
-            // 
-            this.pbYoutubeThumbnail.BackColor = System.Drawing.Color.White;
-            this.pbYoutubeThumbnail.Location = new System.Drawing.Point(10, 7);
-            this.pbYoutubeThumbnail.Name = "pbYoutubeThumbnail";
-            this.pbYoutubeThumbnail.Size = new System.Drawing.Size(60, 45);
-            this.pbYoutubeThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbYoutubeThumbnail.TabIndex = 0;
-            this.pbYoutubeThumbnail.TabStop = false;
             // 
             // lblExit
             // 
@@ -102,6 +92,10 @@
             this.pbDownload.Size = new System.Drawing.Size(361, 20);
             this.pbDownload.TabIndex = 11;
             // 
+            // tmrCheckProgress
+            // 
+            this.tmrCheckProgress.Tick += new System.EventHandler(this.tmrCheckProgress_Tick);
+            // 
             // pbLoad
             // 
             this.pbLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -127,9 +121,15 @@
             this.btnDownload.Zoom = 10;
             this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
-            // tmrCheckProgress
+            // pbYoutubeThumbnail
             // 
-            this.tmrCheckProgress.Tick += new System.EventHandler(this.tmrCheckProgress_Tick);
+            this.pbYoutubeThumbnail.BackColor = System.Drawing.Color.White;
+            this.pbYoutubeThumbnail.Location = new System.Drawing.Point(10, 7);
+            this.pbYoutubeThumbnail.Name = "pbYoutubeThumbnail";
+            this.pbYoutubeThumbnail.Size = new System.Drawing.Size(60, 45);
+            this.pbYoutubeThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbYoutubeThumbnail.TabIndex = 0;
+            this.pbYoutubeThumbnail.TabStop = false;
             // 
             // DownloadItem
             // 
@@ -146,9 +146,9 @@
             this.Name = "DownloadItem";
             this.Size = new System.Drawing.Size(679, 59);
             this.Load += new System.EventHandler(this.DownloadItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbYoutubeThumbnail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDownload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbYoutubeThumbnail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

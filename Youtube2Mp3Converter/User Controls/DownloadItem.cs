@@ -99,10 +99,13 @@ namespace Simple_Youtube2Mp3
                     bunifuElipse1.ElipseRadius = 5;
                     
                     pbYoutubeThumbnail.Load(history.ThumbnailLink);
-                    theVideo = await client.GetVideoAsync(history.VideoId);
+                    theVideo = await client.GetVideoAsync(history.VideoId);                    
                 }
                 catch { }
-            }).Start();            
+            }).Start();
+
+            
+           
 
             lblStatus.Location = pbLoad.Location;
             lblStatus.Text = history.DownloadDate;
@@ -282,25 +285,39 @@ namespace Simple_Youtube2Mp3
         {
             try
             {
-                
-                isDownloading = true;
+
+                isDownloading = true;                
                 if (!canDownload)
                     return;
-                
+
+                pbLoad.Image = null;
                 if (!downloadTask.IsCanceled)
                 {
+                    btnDownload.Enabled = false;
+                    if (theVideo == null)
+                    {
+                        lblStatus.Location = pbLoad.Location;
+                        MessageFormManager.MakeMessagePopup("Could not download that video!\r\nIt might be unavailable", 6);
+                        return;
+                    }
                     //Set the image to zzz - enqueue'd. Then, if it can download(if there aren't already a few threads downloading) it will change to downloading...
                     pbLoad.BackgroundImage = Properties.Resources.zzz;
                     lblStatus.Visible = true;
                     lblStatus.Text = "Enqueued.";
-                    lblExit.Enabled = false;
-                    pbLoad.Image = null;
-                    btnDownload.Enabled = false;
+                    lblExit.Enabled = false;                    
 
-                    var streamInfoSet = await client.GetVideoMediaStreamInfosAsync(theVideo.Id);
+
+
+                    MediaStreamInfoSet streamInfoSet = await client.GetVideoMediaStreamInfosAsync(theVideo.Id);
                     var streamInfo = streamInfoSet.Muxed.WithHighestVideoQuality();
+                    if (BLSettings.KeepMp4) 
+                    {//Audio only                        
+                    }
+                    else
+                    {//Video too
 
-
+                    }
+                                      
                     pbLoad.BackgroundImage = null;
                     pbLoad.Image = Properties.Resources.load25x25;
                     lblStatus.Text = "Downloading...";
@@ -525,71 +542,86 @@ namespace Simple_Youtube2Mp3
                 {
                     if (!string.IsNullOrEmpty(singleVideoId))
                     {
-                        //Put the thumbnail into the picturebox
-                        pbYoutubeThumbnail.Load("http://img.youtube.com/vi/" + singleVideoId + "/0.jpg");
-                        //Get the video                        
-                        if (theVideo == null)                        
-                            theVideo = await client.GetVideoAsync(singleVideoId);                                                                             
-                                               
-
-                        
-
-                        string title = theVideo.Title;
-                        string author = theVideo.Author;
-                        TimeSpan duration = theVideo.Duration;
-
-                        string subTitle = "";
-                        string subAuthor = "";
-
-                        string completeString = ""; //The complete string containing title + author + duration
-
-
-                        if (title.Length > 33)
+                        try
                         {
-                            subTitle = title.Substring(0, 33) + "...";
-                            completeString += subTitle + "   ";
-                        }
-                        else
-                        {
-                            completeString += title + "   ";
-                        }
-
-
-                        if (author.Length > 23)
-                        {
-                            subAuthor = author.Substring(0, 23) + "...";
-                            completeString += subAuthor + "   ";
-                        }
-                        else
-                        {
-                            completeString += author + "   ";
-                        }
-
-                        completeString += duration;
-
-                        lblTitle.Invoke((MethodInvoker)(() =>
-                        {
-                            lblTitle.Text = completeString;
-                            lblExit.Invoke((MethodInvoker)(() =>
+                            //Put the thumbnail into the picturebox
+                            pbYoutubeThumbnail.Load("http://img.youtube.com/vi/" + singleVideoId + "/0.jpg");
+                            //Get the video    
+                            try
                             {
-                                lblExit.Enabled = true;
-                            }));
-                            btnDownload.Invoke((MethodInvoker)(() =>
+                                if (theVideo == null)
+                                    theVideo = await client.GetVideoAsync(singleVideoId);
+                            }
+                            catch (Exception ex)
                             {
-                                btnDownload.Enabled = true;
-                            }));
-                            pbLoad.Invoke((MethodInvoker)(() =>
+                                SetVideoUnavailableErrorText(ex);
+                                return;
+                            }
+
+
+
+
+                            string title = theVideo.Title;
+                            string author = theVideo.Author;
+                            TimeSpan duration = theVideo.Duration;
+
+                            string subTitle = "";
+                            string subAuthor = "";
+
+                            string completeString = ""; //The complete string containing title + author + duration
+
+
+                            if (title.Length > 33)
                             {
-                                pbLoad.Image = null;
-                                pbLoad.BackgroundImage = Properties.Resources.Check;
-                            }));
-                            lblStatus.Invoke((MethodInvoker)(() =>
+                                subTitle = title.Substring(0, 33) + "...";
+                                completeString += subTitle + "   ";
+                            }
+                            else
                             {
-                                if(!isHistory)
-                                    lblStatus.Text = "Ready.";
-                                isReady = true;
+                                completeString += title + "   ";
+                            }
+
+
+                            if (author.Length > 23)
+                            {
+                                subAuthor = author.Substring(0, 23) + "...";
+                                completeString += subAuthor + "   ";
+                            }
+                            else
+                            {
+                                completeString += author + "   ";
+                            }
+
+                            completeString += duration;
+
+                            lblTitle.Invoke((MethodInvoker)(() =>
+                            {
+                                lblTitle.Text = completeString;
+                                lblExit.Invoke((MethodInvoker)(() =>
+                                {
+                                    lblExit.Enabled = true;
+                                }));
+                                btnDownload.Invoke((MethodInvoker)(() =>
+                                {
+                                    btnDownload.Enabled = true;
+                                }));
+                                pbLoad.Invoke((MethodInvoker)(() =>
+                                {
+                                    pbLoad.Image = null;
+                                    pbLoad.BackgroundImage = Properties.Resources.Check;
+                                }));
+                                lblStatus.Invoke((MethodInvoker)(() =>
+                                {
+                                    if (!isHistory)
+                                        lblStatus.Text = "Ready.";
+                                    isReady = true;
+                                }));
                             }));
-                        }));
+                        }
+                        catch(System.Net.WebException ex)
+                        {
+                            SetVideoUnavailableErrorText(ex);
+                        }
                     }
                 });
                 singleVideoThread.IsBackground = true;
@@ -624,6 +656,46 @@ namespace Simple_Youtube2Mp3
         }
 
        
+        private void SetVideoUnavailableErrorText(Exception ex)
+        {
+            string message = "";
+            switch(ex.GetType().ToString())
+            {
+                case "YoutubeExplode.Exceptions.ParseException": message = "Error - Could not parse that video :(";
+                    break;
+                case "YoutubeExplode.Exceptions.VideoUnavailableException": message = "Error - Video not available in your country :(";
+                    break;
+                case "YoutubeExplode.Exceptions.VideoRequiresPurchaseException": message = "Error - Video requires purchase :(";
+                    break;
+                case "System.Net.WebException": message = "Error - That video is unavailable :(";
+                    break;
+                default: message = "Something went wrong :( [" + ex.GetType().ToString() + "]";
+                    break;
+            }
+            lblTitle.Invoke((MethodInvoker)(() =>
+            {
+                lblTitle.Text = message;
+                lblExit.Invoke((MethodInvoker)(() =>
+                {
+                    lblExit.Enabled = true;
+                }));
+                btnDownload.Invoke((MethodInvoker)(() =>
+                {
+                    btnDownload.Enabled = false;
+                }));
+                pbLoad.Invoke((MethodInvoker)(() =>
+                {
+                    pbLoad.Image = null;
+                    pbLoad.BackgroundImage = Properties.Resources.error;
+                }));
+                lblStatus.Invoke((MethodInvoker)(() =>
+                {
+                    if (!isHistory)
+                        lblStatus.Text = "Error.";
+                    isReady = true;
+                }));
+            }));
+        }
 
         private void tmrCheckProgress_Tick(object sender, EventArgs e)
         {

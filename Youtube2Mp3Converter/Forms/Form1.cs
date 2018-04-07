@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YoutubeExplode;
 
 namespace Simple_Youtube2Mp3
 {
@@ -27,6 +28,7 @@ namespace Simple_Youtube2Mp3
         public Form1()
         {
             InitializeComponent();
+            tmrFadeIn.Start();
             AppDomain.CurrentDomain.SetData("DataDirectory", DB_FILE);
             Directory.CreateDirectory(BLIO.rootFolder);
             Directory.CreateDirectory(BLIO.rootFolder + "\\Video");
@@ -34,7 +36,7 @@ namespace Simple_Youtube2Mp3
             this.Opacity = 0;
             ucDownloads = new UCDownloads();
             pnlContents.Controls.Add(ucDownloads);
-            tmrFadeIn.Start();
+            
         }
         //prevent flickering / improve performance by setting every control to double buffered
         protected override CreateParams CreateParams
@@ -81,7 +83,10 @@ namespace Simple_Youtube2Mp3
                 
                 
             }).Start();
-                     
+
+
+            
+
         }
 
 
@@ -121,7 +126,7 @@ namespace Simple_Youtube2Mp3
         }
         private void lblMinimize_MouseLeave(object sender, EventArgs e)
         {
-            lblExit.ForeColor = Color.Transparent;
+            lblMinimize.ForeColor = Color.Transparent;            
         }
 
 

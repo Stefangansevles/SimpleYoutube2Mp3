@@ -47,7 +47,7 @@ namespace Simple_Youtube2Mp3
                    
                 }
 
-                foreach (DownloadHistory history in BLHistory.GetHistory().OrderBy(d => d.DownloadDate))
+                foreach (DownloadHistory history in BLHistory.GetHistory().OrderBy(d => Convert.ToDateTime(d.DownloadDate)))
                 {
                     int y = 0;
                     if (items.Count > 0)
