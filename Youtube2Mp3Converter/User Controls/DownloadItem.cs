@@ -310,6 +310,15 @@ namespace Simple_Youtube2Mp3
 
                     MediaStreamInfoSet streamInfoSet = await client.GetVideoMediaStreamInfosAsync(theVideo.Id);
                     var streamInfo = streamInfoSet.Muxed.WithHighestVideoQuality();
+                    if(streamInfo == null)
+                    {
+                        lblStatus.Text = "Error.";
+                        pbLoad.Image = null;
+                        pbLoad.BackgroundImage = Properties.Resources.error;
+                        lblTitle.Text = "Could not download this video";
+                        lblExit.Enabled = true;
+                        return;
+                    }
                     if (BLSettings.KeepMp4) 
                     {//Audio only                        
                     }
