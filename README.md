@@ -1,4 +1,4 @@
-# SimpleYoutube2Mp3 - Discontinued(for now)
+# SimpleYoutube2Mp3
 ![](https://i.imgur.com/M2k0rt7.png)
 
 
