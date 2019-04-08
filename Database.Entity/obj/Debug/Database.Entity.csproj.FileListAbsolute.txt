@@ -5,3 +5,4 @@ D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Database.
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Database.Entity\bin\Debug\EntityFramework.xml
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Database.Entity\obj\Debug\Database.Entity.dll
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Database.Entity\obj\Debug\Database.Entity.pdb
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Database.Entity\obj\Debug\Database.Entity.csproj.CoreCompileInputs.cache

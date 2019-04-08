@@ -44,50 +44,7 @@ D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2M
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.csproj.GenerateResource.Cache
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.exe
 D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.pdb
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.csprojResolveAssemblyReference.cache
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.Form1.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.MessageForm.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.MsgBox.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.Properties.Resources.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.DownloadItem.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.UCDownloads.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.UCHistory.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple_Youtube2Mp3.UCSettings.resources
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.csproj.GenerateResource.Cache
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.csproj.CoreCompileInputs.cache
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.exe
-D:\users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.pdb
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\x64\SQLite.Interop.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\x86\SQLite.Interop.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Simple Youtube2Mp3.exe.config
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Simple Youtube2Mp3.exe
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Simple Youtube2Mp3.pdb
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\AngleSharp.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Bunifu_UI_v1.5.3.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Business Logic Layer.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Database.Entity.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\EntityFramework.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\EntityFramework.SqlServer.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Newtonsoft.Json.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.EF6.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.Linq.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\YoutubeExplode.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Data Access Layer.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Microsoft.WindowsAPICodePack.dll
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Business Logic Layer.pdb
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Database.Entity.pdb
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Database.Entity.dll.config
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\AngleSharp.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\EntityFramework.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\EntityFramework.SqlServer.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\FSManager.pdb
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\FSManager.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Newtonsoft.Json.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\NReco.VideoConverter.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.dll.config
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\YoutubeExplode.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\YoutubeExtractor.xml
-D:\Users\rs\Documents\[GIT]SimpleYoutube2Mp3\Youtube2Mp3Converter\bin\Debug\Data Access Layer.pdb
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\bin\Debug\Database.Entity.dll.config
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\bin\Debug\System.Data.SQLite.dll.config
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\bin\Debug\Data Access Layer.dll.config
+D:\Users\rs\Documents\Visual Studio 2015\Projects\Youtube2Mp3Converter\Youtube2Mp3Converter\obj\Debug\Simple Youtube2Mp3.csproj.CoreCompileInputs.cache

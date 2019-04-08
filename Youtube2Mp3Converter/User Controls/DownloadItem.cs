@@ -219,6 +219,9 @@ namespace Simple_Youtube2Mp3
 
                 try
                 {
+                    //Create directory in case it doesnt exist
+                    Directory.CreateDirectory(Path.GetDirectoryName(pathToSong));
+
                     await Task.Run(() => FFMpegConverter.ConvertMedia(filePath, pathToSong,BLSettings.AudioType));
                     if(File.Exists(pathToSong))
                     {
@@ -368,7 +371,7 @@ namespace Simple_Youtube2Mp3
             catch (VideoUnavailableException ex)
             {
 
-                if (ex.Code == 150) //Video not available in your country
+                if (ex.Message.Contains("Country")) //Video not available in your country --code 150
                 {
                     MessageFormManager.MakeMessagePopup(theVideo.Title + " Is not available in your country", 7);
                     lblStatus.Invoke((MethodInvoker)(() =>
